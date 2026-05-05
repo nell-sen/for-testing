@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Outfit', sans-serif;
+  --color-background: #080410;
+  --color-foreground: #f0ebff;
+}
+
+:root {
+  --app-font-sans: 'Outfit', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: #080410;
+  color: #f0ebff;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(168,85,247,0.3); border-radius: 2px; }
+
+/* Range input */
+input[type='range'] {
+  -webkit-appearance: none;
+  background: rgba(255,255,255,0.15);
+  border-radius: 4px;
+  height: 4px;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #a855f7;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(168,85,247,0.6);
+}
